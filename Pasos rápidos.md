@@ -29,6 +29,7 @@ PASOS GENERICOS PARA REALIZAR PROYECTOS EN DJANGO DE MANERA FLUIDA
 2.2) En cada proyecto, crea tu modelo
 > cd APLICACION
 > touch MODELO.py
+
 > vi MODELO.py
 ```
 from django.db import models
@@ -42,6 +43,7 @@ class MODELO(models.Model):
 
 > cd APLICACION
 > touch admin.py
+
 > vi admin.py
 
 ```
