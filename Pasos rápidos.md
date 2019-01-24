@@ -172,8 +172,11 @@ INSTALLED_APPS = [
 
 > vi urls.py
 ```
+<<<<<<< HEAD
 #Procurar importar la clase include
 from django.urls import path, include
+=======
+>>>>>>> f65ba1ab784032b58a0b49f0854ec07461ab9c18
 #Añadir en el list de urlpatterns
 urlpatterns = [
 	path('', include (('APLICACION.urls','APLICACION'),namespace='APLICACION')),
