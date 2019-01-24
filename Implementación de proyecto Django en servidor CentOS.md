@@ -40,7 +40,7 @@ DATABASES = {
 }
 ```
 
-##Creación de archivo requirements.txt##
+## Creación de archivo requirements.txt ##
 
 Al momento de instalar los componentes de Python a usar en nuestro proyecto, podemos hacerlo uno a uno manual, o cargar un archivo “requirements.txt” con los componentes para instalar de golpe.
 
@@ -52,11 +52,11 @@ gunicorn==19.7.1
 psycopg2==2.7.1
 ```
 
-##Alta de archivo en Github##
+## Alta de archivo en Github ##
 
 Aprovechando para practicar sus conocimientos de Github, pueden cargar su proyecto en dicho portal y con ello se ahorran tener que instalar un servidor SFTP o copiarlo manualmente con un dispositivo extraible.
 
-##Actualizar CentOS##
+## Actualizar CentOS ##
 Como el caso de Ubuntu, realizaremos como buena práctica la actualización de nuestro servidor.
 
 ```
@@ -66,7 +66,7 @@ sudo yum install centos-release-scl
 shutdown -r now 
 ```
 
-##Actualizar Python##
+## Actualizar Python ##
 CentOS al ser instalado viene con la versión 2.6. Recomiendo actualizarlo al 3.6, así como los componentes git, gcc y virtualenv
 
 ```
@@ -81,7 +81,7 @@ El comando “scl enable rh-python36 bash” es para que la versión default de 
 python --version
 ```
 
-##Creación de usuario para implementación##
+## Creación de usuario para implementación ##
 Crearemos el grupo “platzigram”, y dentro de este se crea el usuario “platzigram”, cuya carpeta raíz será /opt/platzigram
 
 ```
@@ -96,7 +96,7 @@ sudo mkdir /opt/platzigram
 sudo chown platzigram:platzigram /opt/platzigram
 ```
 
-##Instalación y configuración de Postgresql##
+## Instalación y configuración de Postgresql ##
 
 Primero cargemos Postgresql a nuestro servidor
 
@@ -149,7 +149,7 @@ Al final, reiniciamos nuestr servicio
 sudo systemctl restart postgresql-9.6
 ```
 
-##Creación de entorno virtual##
+## Creación de entorno virtual ##
 
 Entramos a nuestro usuario “platzigram”. Verán que nos va a salir el prompt de “-bash-4.2$”, lo cual es normal. Si le dan un “pwd”, verán que estarán posicionados en la carpeta “/opt/platzigram”
 
@@ -207,7 +207,7 @@ python manage.py migrate
 python manage.py collectstatic --noinput
 ```
 
-##Instalación y configuración de Gunicorn##
+## Instalación y configuración de Gunicorn ##
 Nos salimos de nuestro usuario “platzigram”
 
 ```
@@ -238,7 +238,7 @@ sudo systemctl start gunicorn
 sudo systemctl enable gunicorn
 ```
 
-##Instalación y configuración de NGINX##
+## Instalación y configuración de NGINX ##
 
 Creamos el archivo “/etc/yum.repos.d/nginx.repo” con el siguiente contenido
 
@@ -315,7 +315,7 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 ```
 
-##Pasos finales##
+## Pasos finales ##
 
 Reiniciamos nuestro servidor Linux
 
