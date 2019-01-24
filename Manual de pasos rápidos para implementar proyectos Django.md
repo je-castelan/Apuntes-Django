@@ -223,5 +223,31 @@ class CLASSVIEW(VISTAS_REQUERIDA):
 ******************
 ## PASOS FINALES ANTES DE LIBERAR A PRODUCCIÓN ##
 
+Debemos modificar el archivo settings.py para conectar a la base de datos deseada, así como deshabilitar el modo Debug y mencionar los host permitidos para consultar la aplicación
 
+> cd PROYECTO
+
+> vi settings.py
+
+```
+#Pasar DEBUG a falso
+DEBUG = False
+
+#Listar las IP's o dominios válidos a acceder a a la aplicación
+ALLOWED_HOSTS = ['*']
+
+#Configurar los parámetros de conexión a base de datos. Este ejemplo asume que es una base de datos Postgresql
+DATABASES = {
+	'default':{
+		'ENGINE':''django.db.backends.postgresql_psycopg2',
+		'NAME':'BASE_DE_DATOS',
+		'USER':'USUARIO_POSTRES',
+		'PASSWORD':'PASSWORD_DE_USUARIO',
+		'HOST':'IP_SERVIDOR_BD',
+		'PORT':'PUERTO_BD',
+	}
+}
+```
+
+> cd ..
 
