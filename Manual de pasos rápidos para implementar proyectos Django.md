@@ -220,6 +220,32 @@ class CLASSVIEW(VISTAS_REQUERIDA):
 
 > cd ..
 
+4.4) En tu carpeta templates debes dar de alta tu archivo html donde va a caer tu vista.
+
+> cd templates
+
+> touch VISTA.html
+
+> vi VISTA.html
+
+**Revisar la documentación de Templates de Django**
+******************
+
+## 5) FORMS ##
+
+1) Entrar a la aplicación y crear la aplicación forms.py
+
+> cd APLICACION
+
+> touch forms.py
+
+> vi forms.py
+
+```
+from django import forms
+# Recomiendo revisar Form fields en la documentación de Django
+```
+
 ******************
 ## PASOS FINALES ANTES DE LIBERAR A PRODUCCIÓN ##
 
