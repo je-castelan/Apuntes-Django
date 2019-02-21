@@ -61,7 +61,9 @@ En el archivo original de urls.py se añade la línea siguiente al final del lis
 > vi urls.py
 
 ```
-from django.conf import settings //Es necesaria esta libreria
+***Librerias necesarias***
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
 	...
