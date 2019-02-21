@@ -61,6 +61,8 @@ En el archivo original de urls.py se añade la línea siguiente al final del lis
 > vi urls.py
 
 ```
+from django.conf import settings //Es necesaria esta libreria
+
 urlpatterns = [
 	...
 	]  + static(settings.MEDIA_URL,  document_root=settings.MEDIA_ROOT)
